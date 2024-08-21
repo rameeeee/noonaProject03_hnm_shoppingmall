@@ -9,7 +9,7 @@ const ProductDetail = () => {
     const {id} = useParams();
     const [product, setProduct] = useState(null);
     const getProductDetail = async() => {
-        const url = (`http://localhost:4000/products/${id}`);
+        const url = (`https://my-json-server.typicode.com/rameeeee/noonaProject03_hnm_shoppingmall/products/${id}`);
         const response = await fetch(url)
         const data = await response.json()
         console.log('detail info', data)
@@ -37,7 +37,7 @@ const ProductDetail = () => {
 
                         <Dropdown.Menu>
                             {product?.size.map((item, index) => (
-                                <Dropdown.Item href={`#/action-${index+1}`}>{item}</Dropdown.Item>
+                                <Dropdown.Item key={index} href={`#/action-${index+1}`}>{item}</Dropdown.Item>
                             ))}
                         </Dropdown.Menu>
                     </Dropdown>

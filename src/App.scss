@@ -206,8 +206,7 @@ html, body, #root, .wrap {
 // ProductAll Page
 .sort-title {
     display: block;
-    max-width: 932px;
-    margin: 0 auto 10px;
+    margin: 10px 0;
 }
 
 // Detail Page
@@ -264,6 +263,7 @@ html, body, #root, .wrap {
     .menu-area {
         flex-direction: column;
         align-items: center;
+        margin-top: 20px;
         
         .menu-list-wrap {
             padding: 0;
@@ -279,10 +279,19 @@ html, body, #root, .wrap {
         }
         .input-box {
             margin-top: 0;
+            margin-bottom: 14px;
         }
     }
     .sort-title {
         display: block;
         text-align: center;
+    }
+    .login-wrap {
+        align-items: flex-start;
+        min-height: auto;
+        margin-top: 30px;
+        .inner {
+            padding: 0 20px;
+        }
     }
 }
