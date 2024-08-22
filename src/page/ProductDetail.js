@@ -20,17 +20,20 @@ const ProductDetail = () => {
     }, [])
     return (
         <Container>
-            <Row>
+            <Row className="item-wrap">
                 <Col className="product-img">
                     <div className='img-wrap'>
                         <img src={product?.img} />
                     </div>
                 </Col>
                 <Col>
-                    <div className='detail-title'>{product?.title}</div>
-                    <div className='detail-price'>₩{product?.price}</div>
-                    {product?.choice === true ? <div className='detail-subtext'>Conscious choice</div>: ''}
-                    <Dropdown className='detail-dropdown'>
+                    <div className="detail-wrap">
+                        <div className="detail-info">
+                            <div className='detail-title'>{product?.title}</div>
+                            <div className='detail-price'>₩{product?.price}</div>
+                            {product?.choice === true ? <div className='detail-subtext'>Conscious choice</div>: ''}
+                        </div>
+                        <Dropdown className='detail-dropdown'>
                         <Dropdown.Toggle variant="success" id="dropdown-basic">
                             사이즈 선택
                         </Dropdown.Toggle>
@@ -41,6 +44,7 @@ const ProductDetail = () => {
                             ))}
                         </Dropdown.Menu>
                     </Dropdown>
+                    </div>
                     <Button className='detail-btn-add'>추가</Button>
                 </Col>
             </Row>

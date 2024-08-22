@@ -24,7 +24,9 @@ const ProductCard = ({item, authenticate}) => {
     }
     return (
         <div className='product-card' onClick={showDetail}>
-            <img src={item?.img} />
+            <div className='card-img-wrap'>
+                <img src={item?.img} />
+            </div>
             <div>{item?.choice === true ? 'Conscious choice':''}</div>
             <div>{item?.title}</div>
             <div>₩{item?.price}</div>

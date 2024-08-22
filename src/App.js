@@ -28,10 +28,10 @@ function App() {
 
   return (
     <div className="wrap">
-      <Navbar />
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate}/>
       <Routes>
         <Route path='/' element={<ProductAll authenticate={authenticate} />} />
-        <Route path='/login' element={<Login setAuthenticate={setAuthenticate} />} />
+        <Route path='/login' element={<Login  setAuthenticate={setAuthenticate} />} />
         <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate} />} />
       </Routes>
     </div>
